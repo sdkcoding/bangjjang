@@ -14,4 +14,8 @@ public class AdvInquiryBoardDao {
 	public static AdvInquiryBoardDao getInstance () {
 		return Singleton.getInstance();
 	}
+	
+	public void spring(){
+		
+	}
 }
