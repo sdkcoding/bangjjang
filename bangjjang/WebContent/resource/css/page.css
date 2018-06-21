@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.fontcolor > h1{ 
+ 	color:#f4c452; 
+ 	font-size: 40px;
+ 	font-weight: bold; 
+ }

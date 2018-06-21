@@ -1,0 +1,38 @@
+@charset "UTF-8";
+	#out_table{
+		width:550px;
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center;
+	}
+	#login{
+		width:150px;
+		height:90px;
+		color:white;
+		border:0px;
+		background-color:#2487b5;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	.insert{
+		width:300px;
+		height:40px;
+		margin-top: 10px;
+	}
+	.join{
+		width:140px;
+		height:35px;
+		color:white;
+		border:0px;
+		background-color:#2487b5;
+		margin-left:10px;
+	}
+	
+	.find{
+		width:200px;
+		height:35px;
+		color:black;
+		border:0px;
+		background-color:white;
+		margin-left:10px;
+	}

@@ -1,0 +1,156 @@
+@charset "UTF-8";
+.myDocument {
+	padding-bottom: 20px;
+}
+
+.myDocument .clear {
+	clear: both;
+}
+
+.myDocument .hgrp {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	margin: 0;
+	padding: 5px 0 5px 0;
+	width: 100%;
+	border-bottom: 1px solid #aaa;
+}
+
+.myDocument .hgrp dt {
+	float: left;
+	font-size: 16px;
+	padding: 0 0 0 3px;
+	color: #333;
+}
+
+.myDocument .hgrp dd {
+	float: right;
+	margin: 0;
+	padding: 5px 3px 0 0;
+}
+
+.myDocument .hgrp dd ul {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.myDocument .hgrp dd ul li {
+	float: left;
+	font-size: 12px;
+	color: #555;
+	padding-left: 10px;
+	margin-left: 5px;
+	background: url('/img_up/shop_pds/bangjjack/design/copy/ico_arrow1.gif')
+		0 60% no-repeat;
+}
+
+.myDocument .hgrp dd ul li.first {
+	background: none;
+}
+
+.myDocument .table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+.myDocument .table caption {
+	padding: 0 0 5px 0;
+	color: #555;
+}
+
+.myDocument .table caption dl {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	width: 100%;
+	margin: 0;
+	font-size: 12px;
+}
+
+.myDocument .table caption dl dt {
+	float: left;
+}
+
+.myDocument .table caption dl dd {
+	float: right;
+	margin: 0 5px 0 0;
+}
+
+.myDocument .table thead th {
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	padding: .8em 0;
+	background: #eee;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.myDocument .table tbody td, .myDocument .table tbody td a {
+	color: #555;
+}
+
+.myDocument .table tbody td a {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	padding: .6em 0;
+	text-decoration: none;
+}
+
+.myDocument .table tbody td a:hover {
+	text-decoration: underline;
+}
+
+.myDocument .table tbody td {
+	font-size: 12px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+
+.myDocument .table tbody tr:nth-child(odd) td {
+	background: #f9f9f9;
+}
+
+.myDocument .table tbody td.no {
+	color: #666;
+}
+
+.myDocument .table tbody td.subject {
+	text-align: left;
+}
+
+.myDocument .table tbody td.subject span {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+.myDocument .table tbody td.subject img {
+	vertical-align: middle;
+}
+
+.myDocument .table tbody td.name, .myDocument .table tbody td.date {
+	text-align: right;
+	padding-right: 5px;
+	color: #666;
+}
+
+.myDocument .table tbody td.noDoc {
+	padding: 5em 0;
+	font-weight: bold;
+	font-size: 14px;
+	background: none !important;
+}
+
+.myDocument .scPagenate {
+	text-align: center;
+	margin-top: 15px;
+	color: #555;
+	font-size: 12px;
+}
