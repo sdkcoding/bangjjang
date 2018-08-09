@@ -94,22 +94,46 @@ public class BangjjangMainController extends HttpServlet {
 		String view = null;
 		if (requestUri.indexOf("advInq") >= 0) {
 			aibl = (AdvInquiryBoardLogic) advInqBoardObjectMap.get(requestUri);
-			view = aibl.AdvInquiryBoardLogicExecute(request, response);
+			try {
+				view = aibl.AdvInquiryBoardLogicExecute(request, response);
+			} catch (Exception e) {
+				throw new ServletException(e);
+			}
 		} else if (requestUri.indexOf("badPostNtf") >= 0) {
 			bpnbl = (BadPostNotifyBoardLogic) badPostNtfBoardObjectMap.get(requestUri);
-			view = bpnbl.BadPostNotifyBoardLogicExecute(request, response);
+			try {
+				view = bpnbl.BadPostNotifyBoardLogicExecute(request, response);
+			} catch (Exception e) {
+				throw new ServletException(e);
+			}
 		} else if (requestUri.indexOf("main") >= 0) {
 			ml = (MainLogic) mainObjectMap.get(requestUri);
-			view = ml.mainExecute(request, response);
+			try {
+				view = ml.mainExecute(request, response);
+			} catch (Exception e) {
+				throw new ServletException(e);
+			}
 		} else if (requestUri.indexOf("roomHope") >= 0) {
 			robl = (RoomHopeBoardLogic) roomHopeObjectMap.get(requestUri);
-			view = robl.RoomHopeBoardLogicExecute(request, response);
+			try {
+				view = robl.RoomHopeBoardLogicExecute(request, response);
+			} catch (Exception e) {
+				throw new ServletException(e);
+			}
 		} else if (requestUri.indexOf("room") >= 0) {
 			rbl = (RoomBoardLogic) roomBoardObjectMap.get(requestUri);
-			view = rbl.RoomBoardLogicExecute(request, response);
+			try {
+				view = rbl.RoomBoardLogicExecute(request, response);
+			} catch (Exception e) {
+				throw new ServletException(e);
+			}
 		} else if (requestUri.indexOf("user") >= 0) {
 			ul = (UserLogic) userObjectMap.get(requestUri);
-			view = ul.userLogicExecute(request, response);
+			try {
+				view = ul.userLogicExecute(request, response);
+			} catch (Exception e) {
+				throw new ServletException(e);
+			}
 		}
 
 		if (view != null) {
