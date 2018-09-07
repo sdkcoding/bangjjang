@@ -2,10 +2,9 @@ package com.bangjjang.main;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.List;
+import java.util.Map;
 
 public interface Worker {
-	public  List<List<HashMap<String,Object>>> work(Connection conn) throws SQLException; 
+	public Map<String, Object> work(Connection conn) throws SQLException;
 }
 
