@@ -3,9 +3,14 @@ package com.bangjjang.advInquiryBoard.DB;
 import java.math.BigInteger;
 import java.sql.Timestamp;
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Setter
+@Getter
+@ToString
 public class DepositConfirmDto {
 	private BigInteger depositNo;
 	private String name;
@@ -19,4 +24,25 @@ public class DepositConfirmDto {
 	private String companyName;
 	private String inqSelect;
 	private Timestamp depositDate;
+
+	private DepositConfirmDto() {}
+
+	@Builder
+	private DepositConfirmDto(BigInteger depositNo, String name, String email, String phoneNum, String subject,
+			String status, Timestamp acceptDate, String content, BigInteger money, String companyName, String inqSelect,
+			Timestamp depositDate) {
+		this.depositNo = depositNo;
+		this.name = name;
+		this.email = email;
+		this.phoneNum = phoneNum;
+		this.subject = subject;
+		this.status = status;
+		this.acceptDate = acceptDate;
+		this.content = content;
+		this.money = money;
+		this.companyName = companyName;
+		this.inqSelect = inqSelect;
+		this.depositDate = depositDate;
+	}
+
 }

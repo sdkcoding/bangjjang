@@ -52,7 +52,6 @@ public class QueryTemplate {
 		try {
 			pstmt = conn.prepareStatement(query);
 			rs = pstmt.executeQuery();
-			ResultSetMetaData rsmd = rs.getMetaData();
 			if (rs.next()) {
 				Object resultObj = rs.getObject(1);
 				resultBigInteger = (BigInteger) resultObj;

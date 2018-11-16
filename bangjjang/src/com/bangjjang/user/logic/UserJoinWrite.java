@@ -14,18 +14,16 @@ public class UserJoinWrite implements UserLogic {
 	@Override
 	public String userLogicExecute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		UserDao.getInstance().insertMember(new UserDto(
-			request.getParameter("userid"),
-			request.getParameter("email_addr1") + "@" + request.getParameter("email_addr2"),
-			request.getParameter("phone_company") + request.getParameter("hp1") + "-"
-			+ request.getParameter("hp2") + "-" + request.getParameter("hp3"),
-			request.getParameter("password"),
-			request.getParameter("username"),
-			request.getParameter("gender"),
-			request.getParameter("emailrecep"),
-			request.getParameter("snsrecep")
-		));
-//		String contextPath = (String)request.getServletContext().getAttribute("contextPath");
+		UserDto userDto = UserDto.builder().userId(request.getParameter("userid"))
+				.userEmail(request.getParameter("email_addr1") + "@" + request.getParameter("email_addr2"))
+				.phoneNum(request.getParameter("phone_company") + request.getParameter("hp1") + "-"
+						+ request.getParameter("hp2") + "-" + request.getParameter("hp3"))
+				.password(request.getParameter("password")).userName(request.getParameter("username"))
+				.gender(request.getParameter("gender")).emailRecep(request.getParameter("emailrecep"))
+				.snsRecep(request.getParameter("snsrecep")).build();
+		UserDao.getInstance().insertMember(userDto);
+		// String contextPath =
+		// (String)request.getServletContext().getAttribute("contextPath");
 		return "/userJoinComplete.do";
 	}
 

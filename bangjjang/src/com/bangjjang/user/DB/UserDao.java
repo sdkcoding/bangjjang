@@ -1,6 +1,5 @@
 package com.bangjjang.user.DB;
 
-import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.HashMap;
@@ -33,8 +32,10 @@ public class UserDao {
 
 			@Override
 			public Map<String, Object> work(Connection conn) throws SQLException {
+
 				String sql1 = "select fn_nextval('user_no')";
 				String sequenceNumber = QueryTemplate.executeQueryBigInteger(conn, sql1);
+
 				String sql2 = "insert into tb_bang_users(user_no, user_id, user_email, phone_num, password, "
 						+ "user_name, gender, email_recep, sns_recep) values(?,?,?,?,?,?,?,?)";
 				Object[] parameters = new Object[9];

@@ -92,7 +92,7 @@
 		<div style='margin-top: 30px; margin-bottom: 30px; margin-left: 7px; margin-right: 7px;'>
 			<!-- ---------------    body content : 39407 --------------- -->
 
-			<form name='roomBoardForm' action="${contextPath }/roomWrite.do" 
+			<form name='roomBoardForm' action="${contextPath }/roomWrite.do"
 				enctype='multipart/form-data' style='margin: 0' method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 					<div class="row eight-cols">
@@ -126,7 +126,7 @@
 								<option value="원룸텔,고시텔">원룸텔,고시텔</option>
 								<option value="하숙,고시원">하숙,고시원</option>
 								<option value="기타">기타</option>
-							</select> 
+							</select>
 						</div>
 						<div class="col-xs-5 col-lg-5 col-sm-5" style="line-height: 35px; padding-left:0;">
 							<span style="color:red; font-size: 12px;">* 원하시는 광고 분류를 선택해 주세요</span>
@@ -134,7 +134,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="row eight-cols">				
+					<div class="row eight-cols">
 						<label for="mainimage" class="col-xs-2 col-lg-2 col-sm-2 control-label">대표이미지<span style='color:red;'>*</span></label>
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-3 col-lg-3 col-sm-3" style="width:20.5%;">
@@ -152,11 +152,11 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-2 col-lg-2 col-sm-2" style="width:10%;">
 							<label class="radio-inline">
-								<input type='radio' name='gender' id='gender' value="M" checked='checked'>
+								<input type='radio' name='gender' id='gender' value="남" checked='checked'>
 								<span>남</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='gender' id='gender' value="F">
+								<input type='radio' name='gender' id='gender' value="여">
 								<span>여</span>
 							</label>
 						</div>
@@ -193,11 +193,11 @@
 						<div class="col-xs-4 col-lg-4 col-sm-4">
 							<div class="row eight-cols">
 								<div class="col-xs-4 col-lg-4 col-sm-4">
-									<input type="text" id="postcode" name="postcode" disabled 
+									<input type="text" id="postcode" name="postcode" disabled
 										placeholder="우편번호" class="form-control">
 								</div>
 								<div class="col-xs-4 col-lg-4 col-sm-4">
-									<button type='button' class="btn btn-default" 
+									<button type='button' class="btn btn-default"
 										onclick="sample6_execDaumPostcode()">우편번호 찾기</button>
 								</div>
 							</div>
@@ -289,15 +289,15 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-2 col-lg-2 col-sm-2">
 							<label class="radio-inline">
-								<input type='radio' name='wantgender' id='wantgender' value="M" checked='checked'>
+								<input type='radio' name='wantgender' id='wantgender' value="남" checked='checked'>
 								<span>남</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='wantgender' id='wantgender' value="F">
+								<input type='radio' name='wantgender' id='wantgender' value="여">
 								<span>여</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='wantgender' id='wantgender' value="U">
+								<input type='radio' name='wantgender' id='wantgender' value="무관">
 								<span>무관</span>
 							</label>
 						</div>
@@ -359,11 +359,11 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-2 col-lg-2 col-sm-2">
 							<label class="radio-inline">
-								<input type='radio' name='elevator' id='elevator' value="T" checked='checked'>
+								<input type='radio' name='elevator' id='elevator' value="있음" checked='checked'>
 								<span>있음</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='elevator' id='elevator' value="F">
+								<input type='radio' name='elevator' id='elevator' value="없음">
 								<span>없음</span>
 							</label>
 						</div>
@@ -375,11 +375,11 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-2 col-lg-2 col-sm-2">
 							<label class="radio-inline">
-								<input type='radio' name='park' id='park' value="P" checked='checked'>
+								<input type='radio' name='park' id='park' value="가능" checked='checked'>
 								<span>가능</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='park' id='park' value="I">
+								<input type='radio' name='park' id='park' value="불가능">
 								<span>불가능</span>
 							</label>
 						</div>
@@ -528,11 +528,11 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-2 col-lg-2 col-sm-2">
 							<label class="radio-inline">
-								<input type='radio' name='compani' id='compani' value="P" checked='checked'>
+								<input type='radio' name='compani' id='compani' value="가능" checked='checked'>
 								<span>가능</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='compani' id='compani' value="I">
+								<input type='radio' name='compani' id='compani' value="불가능">
 								<span>불가능</span>
 							</label>
 						</div>
@@ -544,11 +544,11 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-4 col-lg-4 col-sm-4">
 							<label class="radio-inline">
-								<input type='radio' name='mvinpossbility' id='mvinpossbility' value="I" checked='checked'>
+								<input type='radio' name='occupancy' id='occupancy' value="즉시입주" checked='checked'>
 								<span>즉시 입주</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='mvinpossbility' id='mvinpossbility' value="C">
+								<input type='radio' name='occupancy' id='occupancy' value="입주협의">
 								<span>입주 협의</span>
 							</label>
 						</div>
@@ -560,11 +560,11 @@
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-2 col-lg-2 col-sm-2">
 							<label class="radio-inline">
-								<input type='radio' name='contract' id='contract' value="P" checked='checked'>
+								<input type='radio' name='contract' id='contract' value="가능" checked='checked'>
 								<span>가능</span>
 							</label>
 							<label class="radio-inline">
-								<input type='radio' name='contract' id='contract' value="I">
+								<input type='radio' name='contract' id='contract' value="불가능">
 								<span>불가능</span>
 							</label>
 						</div>
@@ -588,14 +588,14 @@
 							</select>
 						</div>
 						<div class="col-xs-1 col-lg-1 col-sm-1" style="width:1%; padding-left:0;">
-							<span style="font-size: 20px;">-</span> 
+							<span style="font-size: 20px;">-</span>
 						</div>
 						<div class="col-xs-2 col-lg-2 col-sm-2" style="width:9%;">
 							<input type='text' name='phonenum2' id='phonenum2' size=5 maxlength=4 class="form-control" >
 							<span class="help-block" style="font-size: 10px;">3~4자리 숫자</span>
 						</div>
 						<div class="col-xs-1 col-lg-1 col-sm-1" style="width:1%; padding-left:0;">
-							<span style="font-size: 20px;">-</span> 
+							<span style="font-size: 20px;">-</span>
 						</div>
 						<div class="col-xs-2 col-lg-2 col-sm-2" style="width:9%;">
 							<input type='text' name='phonenum3' id='phonenum3' size=5 maxlength=4  class="form-control">
@@ -619,7 +619,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="row eight-cols">				
+					<div class="row eight-cols">
 						<label for="addimage1" class="col-xs-2 col-lg-2 col-sm-2 control-label">추가이미지1<span style='color:red;'>*</span></label>
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-3 col-lg-3 col-sm-3" style="width:20.5%;">
@@ -631,7 +631,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="row eight-cols">				
+					<div class="row eight-cols">
 						<label for="addimage2" class="col-xs-2 col-lg-2 col-sm-2 control-label">추가이미지2<span style='color:red;'>*</span></label>
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-3 col-lg-3 col-sm-3" style="width:20.5%;">
@@ -643,7 +643,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="row eight-cols">				
+					<div class="row eight-cols">
 						<label for="addimage3" class="col-xs-2 col-lg-2 col-sm-2 control-label">추가이미지3<span style='color:red;'>&nbsp;</span></label>
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-3 col-lg-3 col-sm-3" style="width:20.5%;">
@@ -655,7 +655,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="row eight-cols">				
+					<div class="row eight-cols">
 						<label for="addimage4" class="col-xs-2 col-lg-2 col-sm-2 control-label">추가이미지4<span style='color:red;'>&nbsp;</span></label>
 						<div class="col-xs-1 col-lg-1 col-sm-1"></div>
 						<div class="col-xs-3 col-lg-3 col-sm-3" style="width:20.5%;">
@@ -668,12 +668,12 @@
 				</div>
 
 				<div class="farm-A-btn-wrap">
-					<span class="farm-A-half"> 
+					<span class="farm-A-half">
 						<a href="${contextPath }/roomBoardList.do" class="farm-A-btn-circle farm-A-big">
 							<span class="farm-A-big-txt">LIST</span>
 							<span class="farm-A-small-txt">목록</span>
-						</a> 
-						<a href="#" id="roomWriteSubmit" class="farm-A-btn-circle farm-A-big farm-A-highlight">
+						</a>
+						<a href="${contextPaht }/roomWrite.do" id="roomWriteSubmit" class="farm-A-btn-circle farm-A-big farm-A-highlight">
 							<span class="farm-A-big-txt">WRITE</span>
 							<span class="farm-A-small-txt">등록</span>
 						</a>

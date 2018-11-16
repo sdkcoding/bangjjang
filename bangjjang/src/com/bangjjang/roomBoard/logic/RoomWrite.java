@@ -29,7 +29,7 @@ public class RoomWrite implements RoomBoardLogic {
 		MultipartRequest multi=new MultipartRequest(
 				request, Constants.UPLOAD_PATH + userid + "\\", Constants.MAX_UPLOAD
 				, "utf-8", new DefaultFileRenamePolicy() );
-		
+
 		String region = multi.getParameter("region");
 		String advcatego = multi.getParameter("advcatego");
 		String gender = multi.getParameter("gender");
@@ -38,29 +38,29 @@ public class RoomWrite implements RoomBoardLogic {
 		String postcode = multi.getParameter("postcode");
 		String address1 = multi.getParameter("address");
 		String address2 = multi.getParameter("detailAddress");
-		String address = postcode + "," + address1 + "," + address2 + ",";
+		String address = postcode + "," + address1 + "," + address2;
 		String deposit = multi.getParameter("deposit");
-		if(deposit == null){
+		if("".equals(deposit)){
 			deposit = "없음";
 		}
-		String monthlyrent = multi.getParameter("monthlyrent");  
+		String monthlyrent = multi.getParameter("monthlyrent");
 		String manageexp = multi.getParameter("manageexp");
-		if(manageexp == null){
+		if("".equals(manageexp)){
 			manageexp = "없음";
 		}
 		String wantgender = multi.getParameter("wantgender");
 		String station = multi.getParameter("station");
-		if(station == null){
+		if("".equals(station)){
 			station = "없음";
 		}
 		String wideareastationChoice = multi.getParameter("wideareastationChoice");
-		if(wideareastationChoice.equals("T")){
+		if("T".equals(wideareastationChoice)){
 			station += ",있음";
 		}else{
 			station += ",없음";
 		}
 		int floor = Integer.parseInt(multi.getParameter("floor").trim());
-		String elevator = multi.getParameter("elevator"); 
+		String elevator = multi.getParameter("elevator");
 		String park = multi.getParameter("park");
 		String[] commonuseList = multi.getParameterValues("commonuse");
 		StringBuilder commonuseMerge = new StringBuilder();
@@ -69,7 +69,7 @@ public class RoomWrite implements RoomBoardLogic {
 			commonuseMerge.append(",");
 		}
 		String commonuse = commonuseMerge.toString();
-		
+
 		String[] securityestablishList = multi.getParameterValues("securityestablish");
 		StringBuilder securityestablishMerge = new StringBuilder();
 		for(String i : securityestablishList){
@@ -77,12 +77,13 @@ public class RoomWrite implements RoomBoardLogic {
 			securityestablishMerge.append(",");
 		}
 		String securityestablish = securityestablishMerge.toString();
+
 		String university = multi.getParameter("university");
-		if(university == null){
+		if("".equals(university)){
 			university = "없음";
 		}
 		String compani = multi.getParameter("compani");
-		String mvinpossbility = multi.getParameter("mvinpossbility"); 
+		String occupancy = multi.getParameter("mvinpossbility");
 		String contract = multi.getParameter("contract");
 		String phonenum1 = multi.getParameter("phonenum1");
 		if(phonenum1 == null){
@@ -101,10 +102,10 @@ public class RoomWrite implements RoomBoardLogic {
 		if(kakaotalkid == null){
 			kakaotalkid = "없음";
 		}
-		
+
 		String[] filenames = new String[5]; //공백 1개
 		int filesize=0;
-		
+
 		try {
 			//첨부파일의 집합
 			Enumeration files=multi.getFileNames();
@@ -133,20 +134,23 @@ public class RoomWrite implements RoomBoardLogic {
 		String addimage2 = filenames[2];
 		String addimage1 = filenames[1];
 		String mainimage = filenames[0];
-		
+
 		Date nowdate = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String regdate = dateFormat.format(nowdate);
-		int uninumber = (int) (Math.random() * (999999 - 100000 + 1)) + 100000;
-		RoomBoardDao.getInstance().insertRoom(new RoomBoardDto(
-				region, advcatego, mainimage, gender, detailcontent, roomarea, 
-				address, deposit, monthlyrent, manageexp, wantgender, station, 
-				floor, elevator, park, commonuse, securityestablish, university, 
-				compani, mvinpossbility, contract, phonenum, kakaotalkid, 
-				addimage1, addimage2, addimage3, addimage4, 
-				regdate, 0, uninumber, userid));
-		
-		response.sendRedirect(request.getContextPath() + "/roomBoardList.do");	
+		Long uninumber = (long) (Math.random() * (999999 - 100000 + 1)) + 100000;
+		RoomBoardDto roomBoardDto = RoomBoardDto.builder().region(region).advCatego(advcatego)
+				.mainImage(mainimage).gender(gender).detailContent(detailcontent).roomArea(roomarea)
+				.address(address).deposit(deposit).monthlyRent(monthlyrent).manageExp(manageexp)
+				.wantGender(wantgender).station(station).floor(floor).elevator(elevator)
+				.park(park).commonUse(commonuse).securityEstablish(securityestablish)
+				.university(university).companionAnimal(compani).occupancy(occupancy).contract(contract)
+				.phoneNum(phonenum).kakaotalkId(kakaotalkid).addImage1(addimage1).addImage2(addimage2)
+				.addImage3(addimage3).addImage4(addimage4).regDate(regdate).uniNumber(uninumber)
+				.userId(userid).build();
+		RoomBoardDao.getInstance().insertRoom(roomBoardDto);
+
+		response.sendRedirect(request.getContextPath() + "/roomBoardList.do");
 		return null;
 	}
 }

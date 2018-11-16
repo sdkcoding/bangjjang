@@ -8,9 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
 <title>내가 쓴 광고 문의 게시판</title>
-
-<link href="${contextPath }/resource/css/font.css" rel="stylesheet" type="text/css">
-<link href="${contextPath }/resource/css/page.css" rel="stylesheet" type="text/css">
+<link href="${contextPath }/resource/css/page.css" rel="stylesheet"
+	type="text/css">
+<link href="${contextPath }/resource/css/font.css" rel="stylesheet"
+	type="text/css">
+<link href="${contextPath }/resource/css/nomalize.css" rel="stylesheet"
+	type="text/css">
 <!-- 부트스트랩 -->
 <link href="${contextPath }/resource/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -24,35 +27,38 @@
 </head>
 <body>
 	<jsp:include page="../Page/head.jsp"></jsp:include>
-	<div class="layout_38844_">
-		<div class="container_1">
-			<!-- ---------------   layout in : 마이페이지 상단메뉴 : 38845  --------------- -->
-
-
-			<nav class="mypage_nav_38845_">
-				<ul>
-					<li><a href="/shop_login/mem_form.htm?mode=edit">정보수정</a></li>
-					<li class="on"><a
-						href="/shop_mypage/myreg_my_list.htm?myreg_idx=40457"
-						target="_self">광고제휴문의</a></li>
-					<li><a href="/shop_mypage/myboard_my_list.htm" target="_self">내가
-							쓴 글</a></li>
-					<li><a href="javascript:pwd_ch()">비밀번호변경</a></li>
-					<li><a href="/shop_mypage/tal_form.htm">회원탈퇴</a></li>
-				</ul>
-			</nav>
-
-			<!-- ---------------   layout in : 서브 상단제목 : 38846  --------------- -->
-
-
-			<div class="sub_title_38846_">
-				<h1>광고제휴문의</h1>
+	<div class="container">
+		<nav class="navbar navbar-default" style="border: none;"
+			role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
 			</div>
+			<div class="collapse navbar-collapse navbar-ex1-collapse"
+				style="line-height: 40px;">
+				<ul class="nav nav-pills">
+					<li><a href="${contextPath }/userMypage.do">정보수정</a></li>
+					<li><a href="${contextPath }/advInqBoardList.do"
+						target="_self">광고제휴문의</a></li>
+					<li><a href="${contextPath }/userMyWritedBoardList.do"
+						target="_self">내가 쓴 글</a></li>
+					<li><a href="javascript:pwd_ch()">비밀번호변경</a></li>
+					<li><a href="${contextPath }/userMemberWithdrawForm.do">회원탈퇴</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		<div class="fontcolor">
+			<h1>광고제휴문의</h1>
 		</div>
 	</div>
 
 	<!-- ---------------  layout : 1칸 레이아웃 : 38847 --------------- -->
-
 
 	<div class="layout_38847_">
 		<div class="container_1">
@@ -283,6 +289,6 @@ button.mo-button.btn-block {
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-	<script src="../resource/bootstrap/js/bootstrap.min.js"></script>
+	<script src="${contextPath }/resource/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

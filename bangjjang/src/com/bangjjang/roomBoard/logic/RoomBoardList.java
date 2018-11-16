@@ -1,7 +1,7 @@
 package com.bangjjang.roomBoard.logic;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +16,7 @@ public class RoomBoardList implements RoomBoardLogic {
 	public String RoomBoardLogicExecute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.getParameter("");
-		ArrayList<RoomBoardDto> roomList = RoomBoardDao.getInstance().selectAllRoomList();
+		List<RoomBoardDto> roomList = RoomBoardDao.getInstance().selectAllRoomList();
 		for(RoomBoardDto i : roomList){
 			System.out.println(i);
 		}

@@ -4,7 +4,6 @@ import java.math.BigInteger;
 import java.sql.Timestamp;
 
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -23,9 +22,10 @@ public class AdvInquiryBoardDto {
     private String status;
     private Timestamp acceptDate;
 
-    public AdvInquiryBoardDto() {}
+    private AdvInquiryBoardDto() {}
+
     @Builder
-	public AdvInquiryBoardDto(BigInteger advInquiryNo, String inqSelect, String name, String phoneNum, String email,
+	private AdvInquiryBoardDto(BigInteger advInquiryNo, String inqSelect, String name, String phoneNum, String email,
 			String content, String fileName, String status, Timestamp acceptDate) {
 		this.advInquiryNo = advInquiryNo;
 		this.inqSelect = inqSelect;
